@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학생용 테트리스</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        #game-container {
+            margin-top: 20px;
+        }
+        #game-board {
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+        #score-container {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        #controls {
+            margin-top: 20px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>테트리스 게임</h1>
+    <div id="game-container">
+        <canvas id="game-board" width="300" height="600"></canvas>
+    </div>
+    <div id="score-container">
+        점수: <span id="score">0</span>
+    </div>
+    <div id="controls">
+        <button onclick="startGame()">게임 시작</button>
+        <button onclick="pauseGame()">일시정지</button>
+    </div>
+    <script src="tetris.js"></script>
+</body>
+</html>
